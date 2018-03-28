@@ -1,4 +1,4 @@
-package com.eddy.books.resolver;
+package com.eddy.books.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.eddy.books.model.Author;
