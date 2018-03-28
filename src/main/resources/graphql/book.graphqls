@@ -1,0 +1,25 @@
+input BookInput {
+    title: String!
+    isbn: String!
+    pageCount: Int
+    author: Int!
+    coAuthors: [Int]
+}
+
+type Book {
+    id: ID!
+    title: String!
+    isbn: String!
+    pageCount: Int
+    author: Author!
+    coAuthors: [Author]
+}
+
+extend type Query {
+    findAllBooks: [Book]!
+    countBooks: Long!
+}
+
+extend type Mutation {
+    addBook(book: BookInput!) : Book!
+}
