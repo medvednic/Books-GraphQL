@@ -34,4 +34,8 @@ public class RootQuery implements GraphQLQueryResolver {
     public long countAuthors() {
         return authorRepository.count();
     }
+
+    public Iterable<Book> findBooksByAuthor(Long authorId){
+        return bookRepository.findAllByAuthorId(authorId);
+    }
 }
