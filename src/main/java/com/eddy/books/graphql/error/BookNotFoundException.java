@@ -1,4 +1,4 @@
-package com.eddy.books.graphql.exceptions;
+package com.eddy.books.graphql.error;
 
 import graphql.ErrorType;
 import graphql.GraphQLError;

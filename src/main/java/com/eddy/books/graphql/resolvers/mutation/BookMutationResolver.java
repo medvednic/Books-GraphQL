@@ -1,7 +1,7 @@
-package com.eddy.books.graphql.resolvers;
+package com.eddy.books.graphql.resolvers.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.eddy.books.graphql.exceptions.BookNotFoundException;
+import com.eddy.books.graphql.error.BookNotFoundException;
 import com.eddy.books.model.Author;
 import com.eddy.books.model.Book;
 import com.eddy.books.repository.BookRepository;

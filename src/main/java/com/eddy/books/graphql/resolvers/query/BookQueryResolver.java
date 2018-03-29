@@ -1,21 +1,18 @@
-package com.eddy.books.graphql;
+package com.eddy.books.graphql.resolvers.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.eddy.books.model.Author;
 import com.eddy.books.model.Book;
-import com.eddy.books.repository.AuthorRepository;
 import com.eddy.books.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RootQuery implements GraphQLQueryResolver {
-    private AuthorRepository authorRepository;
+public class BookQueryResolver implements GraphQLQueryResolver {
+
     private BookRepository bookRepository;
 
     @Autowired
-    public RootQuery(AuthorRepository authorRepository, BookRepository bookRepository) {
-        this.authorRepository = authorRepository;
+    public BookQueryResolver(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
@@ -25,14 +22,6 @@ public class RootQuery implements GraphQLQueryResolver {
 
     public long countBooks() {
         return bookRepository.count();
-    }
-
-    public Iterable<Author> findAllAuthors() {
-        return authorRepository.findAll();
-    }
-
-    public long countAuthors() {
-        return authorRepository.count();
     }
 
     public Iterable<Book> findBooksByAuthor(Long authorId){

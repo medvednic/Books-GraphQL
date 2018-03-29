@@ -1,4 +1,4 @@
-package com.eddy.books.graphql.resolvers;
+package com.eddy.books.graphql.resolvers.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.eddy.books.model.Author;
