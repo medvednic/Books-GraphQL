@@ -8,6 +8,9 @@ import graphql.language.SourceLocation;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * adapter to hide stack trace from client when returning a server error
+ */
 public class GraphQLErrorAdapter implements GraphQLError {
 
     private GraphQLError error;

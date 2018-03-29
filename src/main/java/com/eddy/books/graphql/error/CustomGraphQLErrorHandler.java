@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * custom error handler to return explicit server errors to client
+ */
 @Component
 public class CustomGraphQLErrorHandler implements GraphQLErrorHandler {
     @Override
